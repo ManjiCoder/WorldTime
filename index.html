@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Clock</title>
+    <!-- Linking CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>World Clock</h2>
+        <div id="showTime">
+            <span id="hr_min" class="time"></span>
+            <span id="sec" class="time"></span>
+        </div>
+        <h4></h4>
+        <fieldset>
+            <legend>World Clock</legend>
+            <label for="datalist">Select Countries</label>
+            <input list="datalist" name="datalist" placeholder="Select Country">
+            <datalist id="datalist">
+                <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat quasi dolorum, quae consequatur pariatur tempore odit, magni architecto sapiente, provident ducimus iure. Iusto sint ullam animi dolor, exercitationem earum sapiente non eveniet placeat omnis minima ipsam consectetur sit quam ea ducimus consequatur ut architecto cupiditate quos tempore? Debitis iusto, nobis maiores, fugiat ea perferendis vitae velit ratione animi saepe beatae, quae laboriosam. Iste excepturi similique harum sunt enim assumenda quaerat? Similique cumque aliquam delectus omnis deleniti et rem sit, numquam, molestias nesciunt debitis ut architecto. Maiores error dignissimos recusandae debitis, neque cumque architecto voluptatem libero aliquid eaque, quaerat odit? Quasi?</p> -->
+                <option value="Russia"></option>
+                <option value="Newzeland"></option>
+                <option value="Austrailia"></option>
+                <option value="WestIndies"></option>
+            </datalist>
+        </fieldset>
+        <button id="btn" onclick="time()">Submit</button>
+    </div>
+</body>
+<!-- Linking JavaScript -->
+<script src="script.js"></script>
+<script src="index.js"></script>
+
+</html>

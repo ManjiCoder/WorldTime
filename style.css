@@ -10,6 +10,7 @@
 
 :root {
     --padding: 1rem 0;
+    --bg: #8080802f;
 }
 
 .container {
@@ -35,7 +36,7 @@ h2 {
     justify-content: center;
     align-items: center;
     margin: 1rem auto;
-    background: #8080802f;
+    background: var(--bg);
 }
 
 #sec {
@@ -55,3 +56,23 @@ h4 {
     outline: none;
     cursor: pointer;
 }
+
+label{
+    padding: 10px 1rem;
+}
+/* #options{
+    background: var(--bg);
+} */
+fieldset{
+    height: 80px;
+    margin: 1rem auto;
+    padding: 1rem;
+    width: 34vw;
+}
+input{
+    outline: none;
+    padding: 4px 8px
+}
+/* datalist{
+    cursor: pointer;
+} */

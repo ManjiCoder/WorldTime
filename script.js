@@ -26,19 +26,17 @@ function defaultTime() {
     hrMin.innerText = displayTime;
     sec.innerText = secs;
     h4.innerHTML = date;
-    // console.log(date);
-    // clearInterval(myTime)
 }
 
 function time() {
-    let setTime = setInterval(updateTime, 1000);
+    let setTime = setInterval(UTCTime, 1000);
     let s = clearInterval(myTime);
-    console.log(stop);
-    console.log("clicked");
-    function updateTime() {
+
+    function UTCTime() {
         date = new Date()
         let d = date.toUTCString()
         hrs = date.getUTCHours();
+        // hrs = hrs + 11;
         mins = date.getUTCMinutes()
         secs = date.getUTCSeconds()
         if (hrs < 10) {
