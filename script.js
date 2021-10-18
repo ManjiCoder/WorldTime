@@ -104,15 +104,15 @@ btn.addEventListener('click', function startClock() {
             // console.log(Lhr, Lmin);
             // User Entered Time Zone
             let utcdate = new Date()
-             let hr = utcdate.getUTCHours()
-             let min = utcdate.getUTCMinutes()
-             let secs = utcdate.getUTCSeconds()
-             let hrs = hr;
-             let mins = min;
- 
-             let Uhrs = hr;
-             let Umins = min;
-             // console.log(Uhrs);
+            let hr = utcdate.getUTCHours()
+            let min = utcdate.getUTCMinutes()
+            let secs = utcdate.getUTCSeconds()
+            let hrs = hr;
+            let mins = min;
+
+            let Uhrs = hr;
+            let Umins = min;
+            // console.log(Uhrs);
             // console.log(Umins);
 
             // IF Statement for + or -
