@@ -1,21 +1,16 @@
-let opts = document.getElementById('options');
-let p = document.querySelector('p');
 function updateTime() {
-    fetch("/data.json")
+    fetch("/country.json")
         .then(response => response.json())
         .then(rsp => {
-            // console.log(rsp.data);
-            rsp.data.forEach(element => {
-                text = element.text;
-                offset = element.offset;
-                let arr = [ text ]
-                // let arr = new Array(text)
-                // p.innerHTML = text;
-                // console.log(opts);
-                // console.log(arr);
-                // console.log(offset);
+            // console.log(rsp.countries);
+            rsp.countries.forEach(element => {
+                let name = element.name;
+                let offset = element.timezone_offset;
+                // console.log(name , offset);
+                // console.log(typeof(name));
             });
         })
-}
 
+
+}
 updateTime();

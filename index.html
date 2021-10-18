@@ -13,24 +13,307 @@
 <body>
     <div class="container">
         <h2>World Clock</h2>
-        <div id="showTime">
-            <span id="hr_min" class="time"></span>
-            <span id="sec" class="time"></span>
+        <!-- Clock 1 is here -->
+        <div id="clock">
+            <div class="clock-wrapper">
+                <!-- To Show Local Time -->
+                <div id="showLocalTime" class="showTime">
+                    <span id="hr_min" class="time"></span>
+                    <span id="sec" class="time sec"></span>
+                    <span class="sec AM_PM"></span>
+                </div>
+                <h4 id="local"></h4>
+                <h3>India</h3>
+            </div>
+            
+            <div class="clock-wrapper">
+                <!-- Clock 2 is here -->
+                <!-- To Show User Search Time -->
+                <div id="showUserTime" class="showTime">
+                    <span id="Shr_min" class="time"></span>
+                    <span id="Ssec" class="time sec"></span>
+                    <span class="sec AM_PM"></span>
+                </div>
+                <h4 id="utc"></h4>
+                <h3 id="countryName"></h3>
+            </div>
         </div>
-        <h4></h4>
+        <!-- Here is Diferrence -->
+        <div>
+            <h2 id="showTimeD"></h2>
+        </div>
         <fieldset>
             <legend>World Clock</legend>
             <label for="datalist">Select Countries</label>
-            <input list="datalist" name="datalist" placeholder="Select Country">
-            <datalist id="datalist">
-                <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat quasi dolorum, quae consequatur pariatur tempore odit, magni architecto sapiente, provident ducimus iure. Iusto sint ullam animi dolor, exercitationem earum sapiente non eveniet placeat omnis minima ipsam consectetur sit quam ea ducimus consequatur ut architecto cupiditate quos tempore? Debitis iusto, nobis maiores, fugiat ea perferendis vitae velit ratione animi saepe beatae, quae laboriosam. Iste excepturi similique harum sunt enim assumenda quaerat? Similique cumque aliquam delectus omnis deleniti et rem sit, numquam, molestias nesciunt debitis ut architecto. Maiores error dignissimos recusandae debitis, neque cumque architecto voluptatem libero aliquid eaque, quaerat odit? Quasi?</p> -->
-                <option value="Russia"></option>
-                <option value="Newzeland"></option>
-                <option value="Austrailia"></option>
-                <option value="WestIndies"></option>
+            <input id="userInput" list="datalist" name="datalist" placeholder="Select Country">
+            <!-- <ul id="app">
+                <option value=""></option>
+            </ul> -->
+            <datalist id="dlist">
+                <li></li>
+                <option value=""></option>
             </datalist>
+
+            <datalist id="datalist">
+                <option value="Afghanistan UTC+04:30"></option>
+                <option value="Albania UTC+02:00"></option>
+                <option value="Algeria UTC+02:00"></option>
+                <option value="American Samoa UTC-11:00"></option>
+                <option value="Angola UTC+01:00"></option>
+                <option value="Anguilla UTC-04:00"></option>
+                <option value="Antartica UTC+00:00"></option>
+                <option value="Antigua and Barbuda UTC-04:00"></option>
+                <option value="Argentina UTC-03:00"></option>
+                <option value="Armenia UTC-04:00"></option>
+                <option value="Aruba UTC+04:00"></option>
+                <option value="Ashmore and Cartier Island UTC+10:00"></option>
+                <option value="Australia UTC+10:00"></option>
+                <option value="Austria UTC+01:00"></option>
+                <option value="Azerbaijan UTC+04:00"></option>
+                <option value="Bahamas UTC-05:00"></option>
+                <option value="Bahrain UTC+03:00"></option>
+                <option value="Bangladesh UTC+06:00"></option>
+                <option value="Barbados UTC-04:00"></option>
+                <option value="Belarus UTC+03:00"></option>
+                <option value="Belgium UTC+01:00"></option>
+                <option value="Belize UTC-06:00"></option>
+                <option value="Benin UTC+01:00"></option>
+                <option value="Bermuda UTC-04:00"></option>
+                <option value="Bhutan UTC+06:00"></option>
+                <option value="Bhutan UTC+06:00"></option>
+                <option value="Bolivia UTC-04:00"></option>
+                <option value="Bolivia UTC-04:00"></option>
+                <option value="Bosnia and Herzegovina UTC+01:00"></option>
+                <option value="Botswana UTC+02:00"></option>
+                <option value="Brazil UTC-05:00"></option>
+                <option value="British Virgin Islands UTC-04:00"></option>
+                <option value="Brunei UTC+08:00"></option>
+                <option value="Bulgaria UTC+02:00"></option>
+                <option value="Burkina Faso UTC+00:00"></option>
+                <option value="Burma UTC+06:30"></option>
+                <option value="Cambodia UTC+07:00"></option>
+                <option value="Cameroon UTC+01:00"></option>
+                <option value="Canada UTC-06:00"></option>
+                <option value="Cape Verde UTC-01:00"></option>
+                <option value="Cayman Islands UTC-05:00"></option>
+                <option value="Central African Republic UTC+01:00"></option>
+                <option value="Chad UTC+01:00"></option>
+                <option value="Chile UTC-03:00"></option>
+                <option value="China UTC+08:00"></option>
+                <option value="Christmas Island UTC+07:00"></option>
+                <option value="Clipperton Island UTC-08:00"></option>
+                <option value="Cocos (Keeling) Islands UTC+06:30"></option>
+                <option value="Colombia UTC-05:00"></option>
+                <option value="Comoros UTC+03:00"></option>
+                <option value="Congo  Democratic Republic of the UTC+01:00"></option>
+                <option value="Cook Islands UTC-10:00"></option>
+                <option value="Costa Rica UTC-06:00"></option>
+                <option value="Cote d UTC+ Ivoire UTC+00:00"></option>
+                <option value="Croatia UTC+01:00 "></option>
+                <option value="Cyprus UTC+02:00"></option>
+                <option value="Czech Republic UTC+01:00 "></option>
+                <option value="Denmark UTC+01:00"></option>
+                <option value="Djibouti UTC+03:00"></option>
+                <option value="Dominica UTC-04:00"></option>
+                <option value="Dominican Republic UTC-04:00"></option>
+                <option value="Ecuador UTC-05:00 "></option>
+                <option value="Egypt UTC+02:00 "></option>
+                <option value="El Salvador UTC-06:00"></option>
+                <option value="Equatorial Guinea UTC+01:00 "></option>
+                <option value="Eritrea UTC+03:00"></option>
+                <option value="Estonia UTC+02:00"></option>
+                <option value="Ethiopia UTC+03:00"></option>
+                <option value="Europa Island UTC+03:00"></option>
+                <option value="Falkland Islands (Islas Malvinas) UTC-03:00"></option>
+                <option value="Faroe Islands UTC+00:00"></option>
+                <option value="Fiji UTC+12:00"></option>
+                <option value="Finland UTC+02:00"></option>
+                <option value="France UTC+01:00"></option>
+                <option value="French Guiana UTC-03:00"></option>
+                <option value="French Polynesia UTC-10:00"></option>
+                <option value="French Southern and Antarctic Lands UTC+03:00"></option>
+                <option value="Gabon UTC+01:00"></option>
+                <option value="Gambia  The UTC+00:00"></option>
+                <option value="Gaza Strip UTC+03:00"></option>
+                <option value="Georgia UTC+04:00"></option>
+                <option value="Germany UTC+01:00"></option>
+                <option value="Ghana UTC+00:00"></option>
+                <option value="Gibraltar UTC+01:00"></option>
+                <option value="Glorioso Islands UTC+04:00"></option>
+                <option value="Greece UTC+02:00"></option>
+                <option value="Greenland UTC-03:00"></option>
+                <option value="Grenada UTC-04:00"></option>
+                <option value="Guadeloupe UTC-04:00"></option>
+                <option value="Guam UTC+10:00"></option>
+                <option value="Guatemala UTC-06:00"></option>
+                <option value="Guernsey UTC+00:00"></option>
+                <option value="Guinea UTC+00:00"></option>
+                <option value="Guinea-Bissau UTC+00:00"></option>
+                <option value="Guyana UTC-04:00"></option>
+                <option value="Haiti UTC-05:00"></option>
+                <option value="Heard Island and McDonald Islands UTC+05:00"></option>
+                <option value="Holy See (Vatican City) UTC+01:00"></option>
+                <option value="Honduras UTC-06:00"></option>
+                <option value="Hong Kong UTC+08:00"></option>
+                <option value="Howland Island UTC-12:00"></option>
+                <option value="Hungary UTC+01:00"></option>
+                <option value="Iceland UTC+00:00"></option>
+                <option value="India UTC+05:30"></option>
+                <option value="Indonesia UTC+07:00"></option>
+                <option value="Iran UTC+03:30"></option>
+                <option value="Iraq UTC+03:00"></option>
+                <option value="Ireland UTC+00:00"></option>
+                <option value="Ireland  Northern UTC+00:00"></option>
+                <option value="Israel UTC+02:00"></option>
+                <option value="Italy UTC+01:00"></option>
+                <option value="Jamaica UTC+-05:00"></option>
+                <option value="Jan Mayen UTC+01:00"></option>
+                <option value="Japan UTC+09:00"></option>
+                <option value="Jarvis Island UTC-11:00"></option>
+                <option value="Jersey UTC+00:00"></option>
+                <option value="Johnston Atoll UTC-10:00"></option>
+                <option value="Jordan UTC+02:00"></option>
+                <option value="Juan de Nova Island UTC+03:00"></option>
+                <option value="Kazakhstan UTC+05:00"></option>
+                <option value="Kenya UTC+03:00"></option>
+                <option value="Kiribati UTC+12:00"></option>
+                <option value="Korea  North UTC+08:30"></option>
+                <option value="Korea  South UTC+09:00"></option>
+                <option value="Kuwait UTC+03:00"></option>
+                <option value="Kyrgyzstan UTC+06:00"></option>
+                <option value="Laos UTC+07:00"></option>
+                <option value="Latvia UTC+02:00"></option>
+                <option value="Latvia UTC+02:00"></option>
+                <option value="Lebanon UTC+02:00"></option>
+                <option value="Lesotho UTC+02:00"></option>
+                <option value="Liberia UTC+00:00"></option>
+                <option value="Libya UTC+01:00"></option>
+                <option value="Liechtenstein UTC+01:00"></option>
+                <option value="Lithuania UTC+02:00"></option>
+                <option value="Luxembourg UTC+01:00"></option>
+                <option value="Macau UTC+08:00"></option>
+                <option value="Macedonia  Former Yugoslav Republic of UTC+01:00"></option>
+                <option value="Madagascar UTC+03:00"></option>
+                <option value="Malawi UTC+02:00 "></option>
+                <option value="Malaysia UTC+08:00"></option>
+                <option value="Maldives UTC+05:00 "></option>
+                <option value="Mali UTC+00:00"></option>
+                <option value="Malta UTC+00:00"></option>
+                <option value="Man  Isle of UTC+00:00"></option>
+                <option value="Marshall Islands UTC+12:00"></option>
+                <option value="Martinique UTC-04:00"></option>
+                <option value="Mauritania UTC+00:00"></option>
+                <option value="Mauritius UTC+04:00"></option>
+                <option value="Mayotte UTC+03:00"></option>
+                <option value="Mexico UTC-06:00"></option>
+                <option value="Micronesia  Federated States of UTC+10:00"></option>
+                <option value="Midway Islands UTC+11:00"></option>
+                <option value="Moldova UTC+02:00"></option>
+                <option value="Monaco UTC+01:00"></option>
+                <option value="Mongolia UTC+08:00"></option>
+                <option value="Montserrat UTC-04:00"></option>
+                <option value="Morocco UTC+00:00"></option>
+                <option value="Mozambique UTC+02:00"></option>
+                <option value="Namibia UTC+01:00"></option>
+                <option value="Nauru UTC+12:00"></option>
+                <option value="Nepal UTC+05:45"></option>
+                <option value="Netherlands UTC+01:00"></option>
+                <option value="Netherlands Antilles UTC-04:00"></option>
+                <option value="New Zealand UTC+12:00"></option>
+                <option value="Nicaragua UTC-06:00"></option>
+                <option value="Niger UTC+01:00"></option>
+                <option value="Nigeria UTC+01:00"></option>
+                <option value="Niue UTC-11:00"></option>
+                <option value="Norfolk Island UTC+11:30"></option>
+                <option value="Northern Mariana Islands UTC+10:00"></option>
+                <option value="Norway UTC+01:00"></option>
+                <option value="Oman UTC+04:00"></option>
+                <option value="Pakistan UTC+05:00"></option>
+                <option value="Palau UTC+09:00"></option>
+                <option value="Panama UTC+"></option>
+                <option value="Papua New Guinea UTC-05:00"></option>
+                <option value="Paraguay UTC-04:00"></option>
+                <option value="Peru UTC-05:00"></option>
+                <option value="Philippines UTC+08:00"></option>
+                <option value="Pitcaim Islands UTC-08:00"></option>
+                <option value="Poland UTC+01:00"></option>
+                <option value="Portugal UTC+00:00"></option>
+                <option value="Puerto Rico UTC-04:00"></option>
+                <option value="Qatar UTC+03:00"></option>
+                <option value="Reunion UTC+04:00"></option>
+                <option value="Romainia UTC+02:00"></option>
+                <option value="Russia UTC+03:00"></option>
+                <option value="Rwanda UTC+02:00"></option>
+                <option value="Saint Helena UTC+00:00"></option>
+                <option value="Saint Kitts and Nevis UTC-04:00"></option>
+                <option value="Saint Lucia UTC-04:00"></option>
+                <option value="Saint Pierre and Miquelon UTC-03:00"></option>
+                <option value="Saint Vincent and the Grenadines UTC-04:00"></option>
+                <option value="Samoa UTC+13:00"></option>
+                <option value="San Marino UTC+01:00"></option>
+                <option value="Sao Tome and Principe UTC+00:00"></option>
+                <option value="Saudi Arabia UTC+03:00"></option>
+                <option value="Scotland UTC+00:00"></option>
+                <option value="Senegal UTC+00:00"></option>
+                <option value="Seychelles UTC+04:00"></option>
+                <option value="Sierra Leone UTC+00:00"></option>
+                <option value="Singapore UTC+08:00"></option>
+                <option value="Slovakia UTC+01:00"></option>
+                <option value="Slovenia UTC+01:00"></option>
+                <option value="Solomon Islands UTC+11:00"></option>
+                <option value="Somalia UTC+03:00"></option>
+                <option value="South Africa UTC+02:00"></option>
+                <option value="South Georgia and South Sandwich Islands UTC-02:00"></option>
+                <option value="Spain UTC+01:00"></option>
+                <option value="Sri Lanka UTC+05:30"></option>
+                <option value="Sudan UTC+03:00"></option>
+                <option value="Suriname UTC-03:00"></option>
+                <option value="Svalbard UTC+01:00"></option>
+                <option value="Swaziland UTC+02:00"></option>
+                <option value="Sweden UTC+01:00"></option>
+                <option value="Switzerland UTC+01:00"></option>
+                <option value="Syria UTC+02:00"></option>
+                <option value="Taiwan UTC+08:00"></option>
+                <option value="Tajikistan UTC+05:00"></option>
+                <option value="Tanzania UTC+03:00"></option>
+                <option value="Thailand UTC+07:00"></option>
+                <option value="Tobago UTC-04:00"></option>
+                <option value="Togo UTC+00:00"></option>
+                <option value="Tokelau UTC+13:00"></option>
+                <option value="Tonga UTC+13:00"></option>
+                <option value="Trinidad UTC+13:00"></option>
+                <option value="Tunisia UTC+01:00"></option>
+                <option value="Turkey UTC+02:00"></option>
+                <option value="Turkmenistan UTC+05:00"></option>
+                <option value="Tuvalu UTC+12:00"></option>
+                <option value="Uganda UTC+03:00"></option>
+                <option value="Ukraine UTC+02:00"></option>
+                <option value="United Arab Emirates UTC+04:00"></option>
+                <option value="United Kingdom UTC+00:00"></option>
+                <option value="Uruguay UTC-03:00"></option>
+                <option value="USA UTC+00:00"></option>
+                <option value="Uzbekistan UTC-03:00"></option>
+                <option value="Vanuatu UTC+11:00"></option>
+                <option value="Venezuela UTC-04:30"></option>
+                <option value="Vietnam UTC+07:00"></option>
+                <option value="Virgin Islands UTC-04:00"></option>
+                <option value="Wales UTC+10:00"></option>
+                <option value="Wallis and Futuna UTC+12:00"></option>
+                <option value="West Bank UTC+03:00"></option>
+                <option value="Western Sahara UTC+01:00"></option>
+                <option value="Yemen UTC+03:00"></option>
+                <option value="Zambia UTC+01:00"></option>
+                <option value="Zimbabwe UTC+02:00"></option>
+            </datalist>
+            <div id="myItemList">
+            </div>
+
         </fieldset>
-        <button id="btn" onclick="time()">Submit</button>
+
+        <form action="">
+            <button id="btn" class="btn" type="button">Submit</button>
+            <button id="reset" class="btn">Reset</button>
+        </form>
     </div>
 </body>
 <!-- Linking JavaScript -->
