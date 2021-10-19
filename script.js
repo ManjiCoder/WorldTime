@@ -63,8 +63,10 @@ let userInput = document.getElementById('userInput');
 btn.addEventListener('click', function startClock() {
 
     let userTime = userInput.value;
-    countryName.innerText = userTime; // to display country name
+    let getCountry = userTime.substr(0, userTime.length - 9);
+    countryName.innerText = getCountry; // to display country name
     // console.log(userTime); // India UTC+05:30
+    // console.log(getCountry); // India
     if (userTime === "") {
         alert('Select a country to see time')
     }
@@ -98,8 +100,9 @@ btn.addEventListener('click', function startClock() {
                 utcdate.setMinutes(utcdate.getMinutes() + upmins);
             }
             // getstr return Tue, 19 Oct 2021 15:42:10 GMT
-            let getstr = utc.innerHTML = utcdate.toUTCString();
-            // console.log(getstr);
+            let getstr = utcdate.toUTCString();
+            utc.innerText = getstr.substr(0, getstr.length - 12);
+            // let getstr = utc.innerHTML = utcdate.toUTCString();
             // TO get hrs & mins using getstr
             let getstr1 = getstr.substr(getstr.length - 12);
             let getUTC = getstr1.slice(0, 8)

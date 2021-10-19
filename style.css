@@ -1,32 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+/* Importing Google Fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
 /* CSS Reset */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* font-family: 'Patua One', cursive; */
-    font-family: 'DM Serif Display', serif;
+    font-family: "DM Serif Display", serif;
+    letter-spacing: 2px;
 }
 
 /* Custom Variables */
 
 :root {
-    --padding: 1rem 0;
+    --padding: 1.5rem 0;
     --bg: #8080802f;
 }
 
 .container {
-    background: black;
+    padding: var(--padding);
+    padding-bottom: 4rem;
+    background: #000000bf;
     color: white;
     text-align: center;
     min-height: 100vh;
     width: 100vw;
 }
 
-h2 {
-    font-size: 2rem;
-    padding: var(--padding);
+.container::before {
+    position: absolute;
+    content: "";
+    background: url("./img/img.jpg") no-repeat center center/cover;
+    min-height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
 #clock {
@@ -53,21 +63,43 @@ h2 {
     justify-content: center;
     align-items: center;
     /* margin: 1rem auto; */
+    backdrop-filter: blur(2px);
     background: var(--bg);
+    text-shadow: 2px 2px black;
 }
 
 .sec {
     font-size: 2rem;
     color: yellowgreen;
-    margin: 2px;
+    margin-top: 14px;
+    width: 45px;
 }
 
 .AM_PM {
     color: gold;
 }
 
+h2 {
+    font-size: 2rem;
+    padding: var(--padding);
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px black;
+}
+
+h3 {
+    color: gold;
+}
+
 h4 {
     padding: var(--padding);
+}
+
+#showTimeD {
+    color: gold;
+    text-shadow: 2px 2px black;
 }
 
 .btn {
@@ -89,12 +121,24 @@ label {
 } */
 
 legend {
+    text-shadow: 2px 2px black;
     font-size: 2.5rem;
 }
 
 fieldset {
     margin: 1rem 4rem;
-    padding: 1rem 0;
+    padding: 3rem 0;
+    backdrop-filter: blur(2px);
+    background: var(--bg);
+    border-radius: 11px;
+}
+
+/* Media Query for only fieldset > 400px */
+
+@media only screen and (max-width:411px) {
+    fieldset {
+        margin: 1rem;
+    }
 }
 
 input {
@@ -119,21 +163,6 @@ details {
     overflow: auto;
 }
 
-/* datalist{
-    cursor: pointer;
-} */
-
 #showUserTime {
     display: none;
-}
-
-.container::before {
-    position: absolute;
-    content: "";
-    background: url('./img/img.jpg')no-repeat center center/cover;
-    min-height: 100vh;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
 }
