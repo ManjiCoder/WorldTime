@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
 /* CSS Reset */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* font-family: 'Patua One', cursive; */
+    font-family: 'DM Serif Display', serif;
 }
 
 /* Custom Variables */
@@ -92,13 +95,14 @@ legend {
 fieldset {
     margin: 1rem 4rem;
     padding: 1rem 0;
-    /* width: 34vw; */
 }
 
 input {
     font-size: 1rem;
     outline: none;
     padding: 11px 20px;
+    background: white;
+    border-radius: 5px;
 }
 
 input::placeholder {
