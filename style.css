@@ -140,6 +140,8 @@ input::placeholder {
     .container::before {
         min-height: 140vh;
     }
+}
+@media only screen and (max-width:551px) {
     input{
         width: 90%;
     }
