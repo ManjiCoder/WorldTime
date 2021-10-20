@@ -19,12 +19,11 @@
 }
 
 .container {
-    /* background:red; */
     padding: var(--padding);
     padding-bottom: 3rem;
     color: white;
     text-align: center;
-    /* height: inherit; */
+    height: 100%;
     width: 100vw;
 }
 
@@ -164,6 +163,5 @@ details {
 }
 
 #showUserTime {
-    display: none;
-    /*   display is set to flex using JavaScript    */
+    display: none; /*   display is set to flex using JavaScript    */
 }
